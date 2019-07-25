@@ -1,0 +1,273 @@
+body {
+  background-color: #f9f9f9;
+  height: 100%;
+  overflow: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+h1{
+  color: #3c468a;
+  margin: 4% 6%;
+}
+
+html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+iframe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+  font-size: 5rem;
+}
+
+.testimonials {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.testimonials .testimonial-item {
+  max-width: 18rem;
+}
+
+.testimonials .testimonial-item img {
+  max-width: 12rem;
+  -webkit-box-shadow: 0px 5px 5px 0px #adb5bd;
+  box-shadow: 0px 5px 5px 0px #adb5bd;
+}
+
+.call-to-action .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.form-control {
+  background-color: #E7E7E7;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #FFB6C1;
+  border-radius: 5px;
+  width: 80%;
+  border: none;
+  height: 40px;
+  text-align: center;
+  color: #f9f9f9;
+  /*  font-size: 3vw;*/
+}
+
+.authText {
+  color: #b1b1b1;
+  margin-top: 3.5%;
+  margin-left: 8%;
+}
+
+@media screen and (max-width:768px) {
+  .authControl {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    left: 5%;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+  .authControl {
+    position: absolute;
+    left: 150;
+    right: 150;
+    top: 350;
+  }
+}
+
+.authIMG {
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  display: flex;
+}
+
+@media screen and (max-width:1024px) {
+  .authIMG {
+    display: none;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .authText {
+    color: white;
+  }
+}
+
+.authPage{
+  height: 100%;
+}
+
+@media screen and (max-width:1024px) {
+  .authPage {
+    background: url(../img/look.jpg) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    height: 100%;
+  }
+}
+
+.ftr-fxd {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  color: white;
+  background-color: #3c468a;
+  border-top: solid white 1px;
+}
+
+.ftr-txt {
+  color: #F9F9F9;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+.ftr-btn{
+  background-color: #3c468a;
+  color: white;
+  border: 2px solid #FFB6C1;
+  border-radius: 4px;
+  font-size: 2.5vw;
+  padding: 0 4%
+}
+
+.ftr-btn:hover{
+  background-color: #FFB6C1;
+  color: white;
+  border: 2px solid #FFB6C1;
+  border-radius: 4px;
+  font-size: 2.5vw;
+  padding: 0 4%
+}
+
+.catalog{
+  display: flex;
+  margin: 3% 5% 100px 5%;
+}
+
+#clothes {
+   line-height: 0;
+   -webkit-column-count: 5;
+   -webkit-column-gap:   2%;
+   -moz-column-count:    5;
+   -moz-column-gap:      2%;
+   column-count:         5;
+   column-gap:           2%;
+}
+
+#clothes img {
+  width: 100% !important;
+  height: auto !important;
+  margin: 4%;
+}
+
+@media (max-width: 1200px) {
+  #clothes {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #clothes {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #clothes {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #clothes {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}

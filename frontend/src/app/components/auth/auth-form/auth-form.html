@@ -1,0 +1,23 @@
+<div class="authPage">
+  <form name="authForm" novalidate ng-submit="$ctrl.submitForm();">
+    <div class="d-flex flex-row bd-highlight">
+      <div class="d-flex flex-column authControl justify-content-center align-items-center" style="flex-basis: 100%; padding-left: 8%; padding-right: 8%;">
+        <input type="email" ng-model="$ctrl.user.email" class="form-control" id="email" placeholder="Email (must be @gmail.com)" required>
+        <input type="password" ng-model="$ctrl.user.password" class="form-control" id="password" placeholder="Password" style="margin-top:7.5%" required>
+        <div class="d-flex flex-row justify-content-between" style="width: 100%">
+          <button class="btn btn-primary" type="submit" ng-disabled="authForm.$invalid" style="margin-top:5%;">
+            {{ $ctrl.button }}
+          </button>
+            <a class="authText" ui-sref="auth.register" ng-if="$ctrl.isLogin">Don't have an account? Click here to sign up.</a>
+            <a class="authText" ui-sref="auth.login" ng-if="!$ctrl.isLogin">Already have an account? Login here.</a>
+          <div ng-if="$ctrl.message">
+            {{ $ctrl.message }}
+          </div>
+        </div>
+      </div>
+      <div class="auth-image" style="flex-basis: 100%">
+        <img class="authIMG" src="./img/look.jpg">
+      </div>
+    </div>
+  </form>
+</div>
