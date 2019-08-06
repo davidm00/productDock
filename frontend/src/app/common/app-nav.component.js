@@ -1,11 +1,11 @@
-var appTool = {
+var appNav = {
   bindings: {
     user: '<',
     onLogout: '&'
   },
-  templateUrl: './app-tool.html'
+  templateUrl: './app-nav.html'
 };
 
 angular
   .module('common')
-  .component('appTool', appTool);
+  .component('appNav', appNav)

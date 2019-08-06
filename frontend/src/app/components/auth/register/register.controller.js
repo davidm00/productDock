@@ -13,7 +13,7 @@ function registerController(AuthService, $state) {
       .register(event.user)
       .then(function (user) {
         console.log('Success!');
-        $state.go('catalogue');
+        $state.go('common/app');
       }, function(reason) {
         ctrl.error = reason.message;
       });

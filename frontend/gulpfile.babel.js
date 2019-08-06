@@ -31,7 +31,11 @@ const paths = {
     '@uirouter/visualizer/bundles/visualizer.min.js',
     'angular-loading-bar/build/loading-bar.min.js',
     'parse/dist/parse.min.js',
-    'angular-parse/angular-parse.js'
+    'angular-parse/angular-parse.js',
+    'angular-aria/angular-aria.min.js',
+    'angular-animate/angular-animate.min.js',
+    'angular-messages/angular-messages.min.js',
+    'angular-material/angular-material.min.js'
   ],
   static: [
     `${root}/index.html`,

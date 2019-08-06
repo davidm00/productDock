@@ -1,5 +1,5 @@
-<div class="div">
-  <h1>Login</h1>
+<div class="layout-padding">
+  <!-- <h1>Login</h1> -->
   <auth-form
     user="$ctrl.user"
     message="{{ $ctrl.error }}"
@@ -7,6 +7,8 @@
     on-submit="$ctrl.loginUser($event);">
   </auth-form>
 </div>
+
+
 
 <!-- <div class="auth__info">
   <a ui-sref="auth.register" class="auth-text">

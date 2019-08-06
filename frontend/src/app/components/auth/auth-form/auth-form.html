@@ -1,23 +1,92 @@
-<div class="authPage">
-  <form name="authForm" novalidate ng-submit="$ctrl.submitForm();">
-    <div class="d-flex flex-row bd-highlight">
-      <div class="d-flex flex-column authControl justify-content-center align-items-center" style="flex-basis: 100%; padding-left: 8%; padding-right: 8%;">
-        <input type="email" ng-model="$ctrl.user.email" class="form-control" id="email" placeholder="Email (must be @gmail.com)" required>
-        <input type="password" ng-model="$ctrl.user.password" class="form-control" id="password" placeholder="Password" style="margin-top:7.5%" required>
-        <div class="d-flex flex-row justify-content-between" style="width: 100%">
-          <button class="btn btn-primary" type="submit" ng-disabled="authForm.$invalid" style="margin-top:5%;">
-            {{ $ctrl.button }}
-          </button>
-            <a class="authText" ui-sref="auth.register" ng-if="$ctrl.isLogin">Don't have an account? Click here to sign up.</a>
-            <a class="authText" ui-sref="auth.login" ng-if="!$ctrl.isLogin">Already have an account? Login here.</a>
-          <div ng-if="$ctrl.message">
-            {{ $ctrl.message }}
-          </div>
+<md-content layout-padding>
+    <div layout-align="center center" layout-gt-sm="column">
+
+        <img src="img/placeholder.png" style="width: 25%" />
+
+        <div flex="5" hide-xs hide-sm>
+            <!-- Space filler -->
         </div>
-      </div>
-      <div class="auth-image" style="flex-basis: 100%">
-        <img class="authIMG" src="./img/look.jpg">
-      </div>
+
+        <form name="authForm" novalidate ng-submit="$ctrl.submitForm();">
+
+
+            <div layout-gt-sm="row">
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Email</label>
+                    <input required type="email" name="email" ng-model="$ctrl.user.email" ng-pattern="/^.+@.+\..+$/" />
+
+                    <div class="hint">Enter your email.</div>
+
+                    <div ng-messages="userForm.email.$error">
+                        <div ng-message="['required', 'pattern']">
+                            Email is required.
+                        </div>
+                    </div>
+                </md-input-container>
+
+            </div>
+
+            <div layout-gt-sm="row">
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Password</label>
+                    <input type="password" required name="password" ng-model="$ctrl.user.password" />
+
+                    <div class="hint">Enter your email.</div>
+
+                    <div ng-messages="userForm.password.$error">
+                        <div ng-message-exp='required'>
+                            Password is required.
+                        </div>
+                    </div>
+                </md-input-container>
+
+            </div>
+
+            <div layout-gt-sm="row">
+                <md-button aria-label="a Button" class="md-raised md-warn" type="submit" ng-disabled="authForm.$invalid">
+                    {{ $ctrl.button }}
+                </md-button>
+
+                <md-button class="md-warn" ui-sref="auth.register" ng-if="$ctrl.isLogin">Don't have an account? Click here to sign up.</md-button>
+                <md-button class="md-warn" ui-sref="auth.login" ng-if="!$ctrl.isLogin">Already have an account? Login here.</md-button>
+                <div ng-if="$ctrl.message">
+                    {{ $ctrl.error }}
+                </div>
+
+            </div>
+
+        </form>
+
     </div>
-  </form>
-</div>
+</md-content>
+
+
+<!--
+
+<div class="">
+    <form name="authForm" novalidate ng-submit="$ctrl.submitForm();">
+        <div class="">
+            <div class="">
+                <input type="email" ng-model="$ctrl.user.email" class="" id="email" placeholder="Email (must be @gmail.com)" required>
+                <input type="password" ng-model="$ctrl.user.password" class="" id="password" placeholder="Password" required>
+                <div class="">
+                    <md-button class="md-fab" aria-label="a Button" type="submit" ng-disabled="authForm.$invalid">
+                        {{ $ctrl.button }}
+                    </md-button>
+                    <a class="" ui-sref="auth.register" ng-if="$ctrl.isLogin">Don't have an account? Click here to sign up.</a>
+                    <a class="" ui-sref="auth.login" ng-if="!$ctrl.isLogin">Already have an account? Login here.</a>
+                    <div ng-if="$ctrl.message">
+                        {{ $ctrl.message }}
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="">
+                <img class="a" src="./img/look.jpg">
+            </div>
+        </div>
+    </form>
+</div> -->

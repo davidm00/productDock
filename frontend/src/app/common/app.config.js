@@ -3,7 +3,7 @@ angular
   .config(['ParseProvider', function (ParseProvider) {
       ParseProvider.serverURL = 'https://parseapi.back4app.com';
       ParseProvider.initialize(
-          'L7kvLPH8iQUAfij2D10kInatDDtirG9RYXbD4bcx', // This is your Application ID
-          'gvTjfjI3qF9DKL2dgV15s586a6UdAMMKGsqDMITd' // This is your Javascript key
+          '3u6fAYo1XHQsXALYlKsaVRYVBevAh2MQGM1BaOJh', // This is your Application ID
+          'Uyin9xuDYcu1wFgcIOq2BJsdtCjeUAgW0G0GzeG7' // This is your Javascript key
       );
   }]);

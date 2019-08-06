@@ -34,7 +34,7 @@ angular
       to: 'auth.*'
     }, () => {
       if (AuthService.isAuthenticated()) {
-        return $state.target('app.catalogue');
+        return $state.target('app');
       }
     });
   });

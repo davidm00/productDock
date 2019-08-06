@@ -15,8 +15,8 @@ angular
     'ui.router',
     'ngParse',
     'angular-loading-bar'
-  ]);
-  // .run(function($transitions, cfpLoadingBar) {
-  //   $transitions.onStart({}, cfpLoadingBar.start);
-  //   $transitions.onStart({}, cfpLoadingBar.complete);
-  // });
+  ])
+  .run(function ($transitions, cfpLoadingBar) {
+    $transitions.onStart({}, cfpLoadingBar.start);
+    $transitions.onSuccess({}, cfpLoadingBar.complete);
+  });

@@ -12,7 +12,7 @@ function loginController(AuthService, $state) {
       .login(event.user)
       .then(function(user) {
         console.log('Success! Logged in ', user);
-        $state.go('app.catalogue');
+        $state.go('app');
       }, function(reason) {
         console.log(reason);
         ctrl.error = reason.message;
